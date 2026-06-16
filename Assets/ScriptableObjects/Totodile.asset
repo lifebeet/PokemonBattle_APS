@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531ce3c7e7d1a3c4a9ee22c9f0295e6f, type: 3}
+  m_Name: Totodile
+  m_EditorClassIdentifier: Assembly-CSharp::FighterData
+  maxHealth: 200
+  fighterName: Totodile
+  attacks:
+  - name: ChorroDeAgua
+    animationName: 
+    minDamage: 25
+    maxDamage: 40
+    chargeParticles: {fileID: 8620588918006998808, guid: 7f906c77905876d488e88e99d13c3d7d,
+      type: 3}
+    attackParticles: {fileID: 4553287630450876385, guid: 15483e51212e3d74886ea57291f4639a,
+      type: 3}
+  - name: Cascada
+    animationName: 
+    minDamage: 25
+    maxDamage: 55
+    chargeParticles: {fileID: 8620588918006998808, guid: 7f906c77905876d488e88e99d13c3d7d,
+      type: 3}
+    attackParticles: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58,
+      type: 3}
