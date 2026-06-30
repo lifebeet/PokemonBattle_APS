@@ -17,6 +17,7 @@ MonoBehaviour:
   attacks:
   - name: DobleFilo
     animationName: 
+    attackSoundName: 
     minDamage: 25
     maxDamage: 65
     chargeParticles: {fileID: 4772634663576830964, guid: e1385af346f4e624eb313ec1ea4fcd7e,
@@ -25,9 +26,16 @@ MonoBehaviour:
       type: 3}
   - name: HiperRayo
     animationName: 
+    attackSoundName: 
     minDamage: 30
     maxDamage: 45
     chargeParticles: {fileID: 9027514048236820045, guid: effb650189dc5714e9e9801b1cfb3991,
       type: 3}
     attackParticles: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
       type: 3}
+  chargeTime: 2
+  appearPaticles: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
+    type: 3}
+  appearSoundName: Persian
+  damageSoundName: PersianAttack_1
+  deadSoundName: PersianCry

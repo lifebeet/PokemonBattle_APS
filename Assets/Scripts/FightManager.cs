@@ -8,6 +8,10 @@ public class FightManager : MonoBehaviour
  [SerializeField]
  private UnityEvent onFightReady;
  [SerializeField]
+ private UnityEvent onCancelFight;
+ [SerializeField]
+ private UnityEvent onFightStart;
+ [SerializeField]
  private int minimumFighters = 2;
  [SerializeField]
  private int maximumFighters = 2;
@@ -16,6 +20,8 @@ public class FightManager : MonoBehaviour
  private List<Fighter> fighters = new List<Fighter>();
  public void AddFighter(Fighter fighter)
     {
+        poolManager.GetObject(fighter.FighterData.appearPaticles, fighter.transform.position);
+        SoundManager.instance.Play(fighter.FighterData.appearSoundName);
         if (fighters.Count < maximumFighters && !fighters.Contains(fighter))
         {
             fighters.Add(fighter);
@@ -31,6 +37,10 @@ public class FightManager : MonoBehaviour
         if(fighters.Contains(fighter))
         {
             fighters.Remove(fighter);
+            if(fighters.Count < minimumFighters)
+            {
+                onCancelFight?.Invoke();
+            }
         }
     }
     public void StartFight()
